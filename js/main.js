@@ -131,50 +131,9 @@
   prev.addEventListener("click", () => goTo(current - 1));
   next.addEventListener("click", () => goTo(current + 1));
 
-  slider.addEventListener("keydown", (event) => {
-    // Si el foco está en el mapa móvil, las flechas deben desplazar el mapa,
-    // no cambiar de lámina.
-    if (event.target.closest?.("[data-map-scroller]")) return;
-
-    if (event.key === "ArrowLeft") {
-      event.preventDefault();
-      goTo(current - 1);
-    }
-    if (event.key === "ArrowRight") {
-      event.preventDefault();
-      goTo(current + 1);
-    }
-  });
-
-  // Gesto horizontal para cambiar de lámina, excepto dentro del mapa desplazable.
-  let touchStartX = null;
-  let touchStartedOnMap = false;
-
-  slider.addEventListener("touchstart", (event) => {
-    touchStartedOnMap = Boolean(event.target.closest?.("[data-map-scroller]"));
-    if (touchStartedOnMap) {
-      touchStartX = null;
-      return;
-    }
-
-    touchStartX = event.changedTouches[0]?.clientX ?? null;
-  }, { passive: true });
-
-  slider.addEventListener("touchend", (event) => {
-    if (touchStartedOnMap) {
-      touchStartedOnMap = false;
-      touchStartX = null;
-      return;
-    }
-
-    if (touchStartX === null) return;
-    const touchEndX = event.changedTouches[0]?.clientX ?? touchStartX;
-    const delta = touchEndX - touchStartX;
-    touchStartX = null;
-
-    if (Math.abs(delta) < 55) return;
-    goTo(delta > 0 ? current - 1 : current + 1);
-  }, { passive: true });
+  // El cambio entre láminas se realiza exclusivamente con los botones
+  // de flecha ubicados a los lados del título. No se habilitan gestos
+  // horizontales ni navegación con las flechas del teclado para cambiar slide.
 
 
   // La barra inferior del mapa refleja el desplazamiento horizontal real.

@@ -73,7 +73,7 @@ Para pantallas de hasta `768px`, el proyecto cambia automáticamente a los recur
 
 En la sección **Cómo y de dónde obtiene Cuba sus recursos básicos**, el mapa `Mapa_Cuba_Mobile.svg` se presenta dentro de un contenedor con desplazamiento horizontal. El usuario puede recorrerlo con el dedo en dispositivos táctiles o mediante desplazamiento horizontal en otros dispositivos.
 
-El gesto realizado sobre este mapa está separado del gesto utilizado para cambiar de slide, evitando que al mover el mapa se avance accidentalmente a otra lámina.
+El desplazamiento horizontal de este mapa es independiente del carrusel. Mover el mapa no cambia de slide; el cambio de lámina se realiza únicamente con los botones de flecha ubicados junto al título.
 
 En MO, la sección **Fuentes** se encuentra al final del contenido. Al tocar el botón se abre el panel de fuentes y al volver a tocarlo se cierra.
 
@@ -110,7 +110,6 @@ El archivo `js/main.js` controla:
 - Navegación entre los ocho slides.
 - Cambio automático entre los SVG de PC y MO según el ancho de pantalla.
 - Visibilidad de las flechas anterior y siguiente.
-- Navegación mediante las teclas izquierda y derecha.
-- Navegación táctil horizontal entre slides.
+- Navegación entre slides únicamente mediante los botones de flecha ubicados junto al título.
 - Desplazamiento horizontal independiente del mapa en MO.
 - Apertura y cierre de la sección Fuentes.
