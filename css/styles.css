@@ -46,7 +46,7 @@ svg {
 .page-shell {
   position: relative;
   width: 100%;
-  min-height: 1750px;
+  min-height: 200vh;
   overflow-x: clip;
   background: #F3F4E1 0% 0% no-repeat padding-box;
   opacity: 1;
