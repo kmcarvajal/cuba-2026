@@ -441,17 +441,25 @@ svg {
     border-radius: 999px;
     background: #DCD68A;
     overflow: hidden;
+    touch-action: none;
+    cursor: pointer;
   }
 
-  .mobile-map__indicator span {
+  .mobile-map__thumb {
     position: absolute;
     top: 0;
-    left: 50%;
+    left: 0;
     width: 43%;
     height: 100%;
-    transform: translateX(-50%);
     border-radius: inherit;
     background: #9C7E00;
+    transform: translateX(0);
+    will-change: transform;
+    cursor: grab;
+  }
+
+  .mobile-map__thumb:active {
+    cursor: grabbing;
   }
 
   .sources--mobile {
