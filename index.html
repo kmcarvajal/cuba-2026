@@ -14,19 +14,19 @@
     <section class="hero" aria-labelledby="main-heading">
       <h1 id="main-heading" class="sr-only">Cuba: ¿Qué tanto más resistirá la isla?</h1>
 
-      <div class="sources" data-sources>
+      <div class="sources sources--desktop" data-sources>
         <button
           class="sources__trigger"
           type="button"
           aria-expanded="false"
-          aria-controls="sources-panel"
+          aria-controls="sources-panel-desktop"
           data-sources-trigger
         >
           <img src="assets/icons/informe-de-analisis.svg" alt="" aria-hidden="true">
           <span>Fuentes</span>
         </button>
 
-        <div id="sources-panel" class="sources__panel" role="note" hidden data-sources-panel>
+        <div id="sources-panel-desktop" class="sources__panel" role="note" hidden data-sources-panel>
           <p>
             Elaboración propia con datos de la ONEI, <strong>Gobierno de Cuba, EIA, OPS/OMS,
             Casa Blanca, Departamento de Estado de EE. UU., Reuters, Associated Press (AP) y EFE.</strong>
@@ -47,7 +47,7 @@
       </p>
     </section>
 
-    <section class="slider" aria-roledescription="carrusel" aria-label="Infografía de Cuba">
+    <section class="slider" aria-roledescription="carrusel" aria-label="Infografía de Cuba" tabindex="-1">
       <div class="slider__heading-row">
         <button class="slider__arrow slider__arrow--prev" type="button" aria-label="Ver lámina anterior" data-prev>
           <img src="assets/icons/flecha-hacia-la-izquiarda-en-un-circulo.svg" alt="">
@@ -60,12 +60,52 @@
         </button>
       </div>
 
-      <div class="slider__viewport" data-slide-viewport aria-live="polite">
-        <img class="slider__graphic" data-slide-image src="assets/sliders/slide-01.svg" alt="">
+      <div class="slider__viewport" data-slide-viewport>
+        <div class="mobile-map" hidden data-mobile-map>
+          <div
+            class="mobile-map__scroller"
+            data-map-scroller
+            tabindex="0"
+            role="region"
+            aria-label="Mapa de Cuba. Deslice horizontalmente para recorrerlo completo."
+          >
+            <img
+              class="mobile-map__image"
+              src="assets/sliders-mo/Mapa_Cuba_Mobile.svg"
+              alt="Mapa de Cuba con las principales ubicaciones asociadas a electricidad y agua."
+            >
+          </div>
+          <div class="mobile-map__indicator" aria-hidden="true">
+            <span></span>
+          </div>
+        </div>
+
+        <img class="slider__graphic" data-slide-image src="assets/sliders-pc/slide-01.svg" alt="">
       </div>
 
       <p class="sr-only" data-slide-status aria-live="polite"></p>
     </section>
+
+    <div class="sources sources--mobile" data-sources>
+      <button
+        class="sources__trigger"
+        type="button"
+        aria-expanded="false"
+        aria-controls="sources-panel-mobile"
+        data-sources-trigger
+      >
+        <img src="assets/icons/informe-de-analisis.svg" alt="" aria-hidden="true">
+        <span>Fuentes</span>
+      </button>
+
+      <div id="sources-panel-mobile" class="sources__panel" role="note" hidden data-sources-panel>
+        <p>
+          Elaboración propia con datos de la ONEI, <strong>Gobierno de Cuba, EIA, OPS/OMS,
+          Casa Blanca, Departamento de Estado de EE. UU., Reuters, Associated Press (AP) y EFE.</strong>
+          Información consultada entre enero y agosto de 2026. Imágenes de archivo.
+        </p>
+      </div>
+    </div>
   </main>
 
   <script src="js/main.js"></script>
