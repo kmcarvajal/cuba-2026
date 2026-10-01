@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Cuba: ¿Qué tanto más resistirá la isla?</title>
+  <meta name="description" content="Infografía interactiva sobre Cuba con ocho láminas navegables.">
+  <link rel="stylesheet" href="https://use.typekit.net/xkd2kgw.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero" aria-labelledby="main-heading">
+      <h1 id="main-heading" class="sr-only">Cuba: ¿Qué tanto más resistirá la isla?</h1>
+
+      <div class="sources" data-sources>
+        <button
+          class="sources__trigger"
+          type="button"
+          aria-expanded="false"
+          aria-controls="sources-panel"
+          data-sources-trigger
+        >
+          <img src="assets/icons/informe-de-analisis.svg" alt="" aria-hidden="true">
+          <span>Fuentes</span>
+        </button>
+
+        <div id="sources-panel" class="sources__panel" role="note" hidden data-sources-panel>
+          <p>
+            Elaboración propia con datos de la ONEI, <strong>Gobierno de Cuba, EIA, OPS/OMS,
+            Casa Blanca, Departamento de Estado de EE. UU., Reuters, Associated Press (AP) y EFE.</strong>
+            Información consultada entre enero y agosto de 2026. Imágenes de archivo.
+          </p>
+        </div>
+      </div>
+
+      <img class="hero__title" src="assets/TITULO.svg" alt="Cuba: ¿Qué tanto más resistirá la isla?">
+
+      <p class="hero__lead">
+        Cuba atraviesa la crisis más prolongada desde los años noventa. La diferencia es que ahora la presión económica interna coincide con una ofensiva de Estados Unidos mucho más agresiva: bloqueo petrolero, sanciones ampliadas y la amenaza de una acción militar sobre la mesa.
+      </p>
+
+      <p class="hero__question">
+        La isla está cerca de alcanzar un declive económico y social,<br class="desktop-break">
+        pero ¿qué tan cerca está el sistema político de caer?
+      </p>
+    </section>
+
+    <section class="slider" aria-roledescription="carrusel" aria-label="Infografía de Cuba">
+      <div class="slider__heading-row">
+        <button class="slider__arrow slider__arrow--prev" type="button" aria-label="Ver lámina anterior" data-prev>
+          <img src="assets/icons/flecha-hacia-la-izquiarda-en-un-circulo.svg" alt="">
+        </button>
+
+        <h2 class="slider__title" data-slide-title aria-live="polite"></h2>
+
+        <button class="slider__arrow slider__arrow--next" type="button" aria-label="Ver lámina siguiente" data-next>
+          <img src="assets/icons/flecha-hacia-la-derecha-en-un-circulo.svg" alt="">
+        </button>
+      </div>
+
+      <div class="slider__viewport" data-slide-viewport aria-live="polite">
+        <img class="slider__graphic" data-slide-image src="assets/sliders/slide-01.svg" alt="">
+      </div>
+
+      <p class="sr-only" data-slide-status aria-live="polite"></p>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
