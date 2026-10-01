@@ -1,24 +1,40 @@
-# Cuba 2026 — infografía interactiva
+# Cuba 2026
 
-Proyecto HTML/CSS/JS construido a partir de los SVG y especificaciones del diseño suministrado.
+Especial multimedia sobre la crisis económica, energética y social de Cuba, sus principales fuentes de recursos y la evolución de la presión de Estados Unidos durante 2026.
 
-## Ejecutar
+El proyecto fue desarrollado a partir del diseño suministrado en Adobe XD, conservando su estructura visual, recursos gráficos, tipografías, colores e interacciones principales.
 
-Puedes abrir `index.html` directamente en el navegador. Para evitar restricciones de algunos navegadores con archivos locales, también puedes levantar un servidor local desde esta carpeta:
+## Tecnologías
 
-```bash
-python -m http.server 8000
-```
-
-Luego abre `http://localhost:8000`.
+- HTML5 semántico.
+- CSS3 responsive.
+- JavaScript vanilla.
+- Adobe Fonts / Typekit para las tipografías definidas en el diseño.
+- Recursos gráficos en formato SVG.
+- Sin frameworks de frontend.
 
 ## Estructura
 
-- `index.html`: estructura principal, bloque de fuentes, introducción y carrusel.
-- `css/styles.css`: maquetación, tipografía y comportamiento responsive.
-- `js/main.js`: navegación de las ocho láminas y apertura/cierre de Fuentes.
-- `assets/TITULO.svg`: encabezado gráfico.
-- `assets/icons/`: iconos suministrados.
-- `assets/sliders/slide-01.svg` a `slide-08.svg`: láminas del carrusel.
-
-El proyecto intenta conservar las medidas del arte de escritorio de 1920 px y se adapta a pantallas más pequeñas.
+```txt
+.
+├── index.html
+├── assets/
+│   ├── icons/
+│   │   ├── flecha-hacia-la-derecha-en-un-circulo.svg
+│   │   ├── flecha-hacia-la-izquiarda-en-un-circulo.svg
+│   │   └── informe-de-analisis.svg
+│   ├── sliders/
+│   │   ├── slide-01.svg
+│   │   ├── slide-02.svg
+│   │   ├── slide-03.svg
+│   │   ├── slide-04.svg
+│   │   ├── slide-05.svg
+│   │   ├── slide-06.svg
+│   │   ├── slide-07.svg
+│   │   └── slide-08.svg
+│   └── TITULO.svg
+├── css/
+│   └── styles.css
+├── js/
+│   └── main.js
+└── README.md
