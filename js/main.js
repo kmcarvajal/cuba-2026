@@ -131,12 +131,6 @@
   prev.addEventListener("click", () => goTo(current - 1));
   next.addEventListener("click", () => goTo(current + 1));
 
-  // El cambio entre láminas se realiza exclusivamente con los botones
-  // de flecha ubicados a los lados del título. No se habilitan gestos
-  // horizontales ni navegación con las flechas del teclado para cambiar slide.
-
-
-  // La barra inferior del mapa refleja el desplazamiento horizontal real.
   if (mapScroller && mapIndicator && mapThumb) {
     mapScroller.addEventListener("scroll", updateMapScrollbar, { passive: true });
 
@@ -202,7 +196,6 @@
     mobileQuery.addListener(handleViewportChange);
   }
 
-  // ---------- Fuentes: hay una versión de escritorio y otra al final en MO. ----------
   const sourceBlocks = [...document.querySelectorAll("[data-sources]")];
 
   function setSourcesOpen(root, open) {
